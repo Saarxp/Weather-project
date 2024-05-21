@@ -6,8 +6,12 @@ import { LoggedInContext } from "./context/loggedInContext";
 import { UserType } from "./types/user/UserType";
 
 function MyApp() {
-  const [userDetails, setUserDetails] = useState<UserType | undefined>(undefined);
-  const [token, setToken] = useState(sessionStorage.getItem("token") || undefined);
+  const [userDetails, setUserDetails] = useState<UserType | undefined>(
+    undefined
+  );
+  const [token, setToken] = useState(
+    sessionStorage.getItem("token") || undefined
+  );
 
   useEffect(() => {
     if (token) {
@@ -17,7 +21,7 @@ function MyApp() {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
-              "Authorization": `Bearer ${token}`,
+              Authorization: `Bearer ${token}`,
             },
           });
           const { userDetails } = await response.json();
@@ -50,7 +54,9 @@ function MyApp() {
     <>
       <LoggedInContext.Provider value={token}>
         <UserContext.Provider value={userDetails}>
-          <RouterProvider router={router} />
+          <div className="h-full">
+            <RouterProvider router={router} />
+          </div>
         </UserContext.Provider>
       </LoggedInContext.Provider>
     </>

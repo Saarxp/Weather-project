@@ -6,6 +6,12 @@ export default {
   ],
   theme: {
     extend: {},
+    // fontSize: {
+    //   vws: ['.5vw'],
+    //   vwm: ['.8vw'],
+    //   vwl: ['2vw'],
+    //   vwxl: ['3vw'],
+    // }
   },
   plugins: [      
     forms,

@@ -16,7 +16,7 @@ function Weather() {
   const params = {
     appid: apiKey,
     q: city,
-    cnt: 1,
+    cnt: 7,
     units: "metric"
   }
 
@@ -28,6 +28,9 @@ function Weather() {
 
       if (response.status === 200) {
         setWeather(response.data);
+        console.log(response.data);
+        
+        
         return setLoading(false);
 
       } else {
@@ -47,9 +50,9 @@ function Weather() {
   return (
     <>
       {token ?
-        <div className="pt-5">
-          <h1 className='flex justify-center items-center text-2xl'>Search a city weather!</h1>
-          <form className='flex justify-center items-center mt-10 mb-10' onSubmit={(ev) => handleSearch(ev)}>
+        <div className="flex flex-col gap-y-6 h-4/5">
+          <h1 className='flex justify-center items-center text-4xl text-white'>Search a city weather!</h1>
+          <form className='flex justify-center items-center' onSubmit={(ev) => handleSearch(ev)}>
             <input type="text" name='inputCity' onChange={(event) => setCity(event.target.value)} />
             <input type="submit" value="Search" className='justify-center rounded-md bg-indigo-600 px-3 py-1.5 font-semibold leading-6 text-white hover:bg-indigo-500 cursor-pointer' />
           </form>

@@ -60,7 +60,7 @@ function RegisterPage() {
                 <div className="sm:col-span-2">
                   <label
                     htmlFor="firstName"
-                    className="block text-sm font-medium leading-6 text-gray-900"
+                    className="block text-sm font-medium leading-6 text-white"
                   >
                     First name
                   </label>
@@ -80,7 +80,7 @@ function RegisterPage() {
                 <div className="sm:col-span-2">
                   <label
                     htmlFor="lastName"
-                    className="block text-sm font-medium leading-6 text-gray-900"
+                    className="block text-sm font-medium leading-6 text-white"
                   >
                     Last name
                   </label>
@@ -100,7 +100,7 @@ function RegisterPage() {
                 <div className="sm:col-span-4">
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium leading-6 text-gray-900"
+                    className="block text-sm font-medium leading-6 text-white"
                   >
                     Email address
                   </label>
@@ -120,7 +120,7 @@ function RegisterPage() {
                 <div className="sm:col-span-2 sm:col-start-1">
                   <label
                     htmlFor="password"
-                    className="block text-sm font-medium leading-6 text-gray-900"
+                    className="block text-sm font-medium leading-6 text-white"
                   >
                     Password
                   </label>
@@ -140,7 +140,7 @@ function RegisterPage() {
                 <div className="sm:col-span-2">
                   <label
                     htmlFor="confirmPassword"
-                    className="block text-sm font-medium leading-6 text-gray-900"
+                    className="block text-sm font-medium leading-6 text-white"
                   >
                     Confirm Password
                   </label>
@@ -163,7 +163,7 @@ function RegisterPage() {
                 <div className="col-span-full">
                   <label
                     htmlFor="photo"
-                    className="block text-lg font-medium leading-6 text-gray-900 text-center"
+                    className="block text-lg font-medium leading-6 text-white text-center"
                   >
                     Photo
                   </label>
@@ -188,7 +188,7 @@ function RegisterPage() {
             <div className="flex items-center justify-around">
               <Link
                 to={"/"}
-                className="text-sm font-semibold leading-6 text-gray-900"
+                className="text-sm font-semibold leading-6 text-white"
               >
                 Cancel
               </Link>
@@ -200,7 +200,7 @@ function RegisterPage() {
                 Register
               </button>
             </div>
-            <p className="mt-10 text-center text-sm text-gray-500">
+            <p className="mt-10 text-center text-sm text-white">
               Already a member?{' '}
               <a href="/login" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
                 Log In!

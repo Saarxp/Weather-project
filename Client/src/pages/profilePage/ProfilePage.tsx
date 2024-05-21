@@ -67,11 +67,11 @@ function ProfilePage() {
   return (
     <>
       {token ? (
-        <div className="flex flex-col items-center justify-center h-screen">
-          <h1 className="text-3xl font-bold mb-4 flex justify-center">
+        <div className="flex flex-col items-center justify-center h-4/5">
+          <h1 className="text-3xl font-bold mb-4 flex justify-center text-white">
             Settings
           </h1>
-          <p className="text-lg font-bold flex justify-center">
+          <p className="text-lg font-bold flex justify-center text-white">
             Update Your User
           </p>
 
@@ -82,7 +82,7 @@ function ProfilePage() {
                   <div className="sm:col-span-2">
                     <label
                       htmlFor="firstName"
-                      className="block text-sm font-medium leading-6 text-gray-900"
+                      className="block text-sm font-medium leading-6 text-white"
                     >
                       First Name
                     </label>
@@ -101,7 +101,7 @@ function ProfilePage() {
                   <div className="sm:col-span-2">
                     <label
                       htmlFor="lastName"
-                      className="block text-sm font-medium leading-6 text-gray-900"
+                      className="block text-sm font-medium leading-6  text-white"
                     >
                       Last Name
                     </label>
@@ -120,7 +120,7 @@ function ProfilePage() {
                   <div className="sm:col-span-4">
                     <label
                       htmlFor="email"
-                      className="block text-sm font-medium leading-6 text-gray-900"
+                      className="block text-sm font-medium leading-6 text-white"
                     >
                       Email Address
                     </label>
@@ -139,7 +139,7 @@ function ProfilePage() {
                   <div className="sm:col-span-2 sm:col-start-1">
                     <label
                       htmlFor="password"
-                      className="block text-sm font-medium leading-6 text-gray-900"
+                      className="block text-sm font-medium leading-6 text-white"
                     >
                       Password
                     </label>
@@ -158,7 +158,7 @@ function ProfilePage() {
                   <div className="sm:col-span-2">
                     <label
                       htmlFor="confirmPassword"
-                      className="block text-sm font-medium leading-6 text-gray-900"
+                      className="block text-sm font-medium leading-6 text-white"
                     >
                       Confirm Password
                     </label>
@@ -178,7 +178,7 @@ function ProfilePage() {
               <div className="flex items-center justify-around">
                 <Link
                   to={"/"}
-                  className="text-sm font-semibold leading-6 text-gray-900"
+                  className="text-sm font-semibold leading-6 text-white"
                 >
                   Cancel
                 </Link>

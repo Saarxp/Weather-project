@@ -1,22 +1,19 @@
 interface WeatherDayProps {
-    day: any
+    weather: any
+    index: number,
+    daysAWeek: string[],
 }
 
-function WeatherDay({ day }: WeatherDayProps) {
-    return (
-        <div className="weatherDay ">
-            <p className="weatherTemp">Today's temperature: {day.main.temp}°C</p>
-            <p>Feels like: {day.main.feels_like}°C</p>
-            <p>Humidity: {day.main.humidity}RH</p>
-            {day.weather.map((weather: any) => {
-                return (
-                    <div key={weather.id} className="weatherInfo">
-                        <p className="text-base">Description: {weather.description}</p>
-                        <img style={{width:"50px"}} src={`http://openweathermap.org/img/wn/${weather.icon}.png`} alt={weather.description} className="mt-1 w-6 h-16" />
-                    </div>
-                );
-            })}
 
+
+function WeatherDay({ weather , index , daysAWeek }: WeatherDayProps) {
+    return (
+        <div className="shadow-inner shadow-slate-500 gap-y-2 flex flex-col p-5 rounded-2xl w-1/5">
+            <p className="text-l">{daysAWeek[index]} temperature: {weather.main.temp}°C</p>
+            <p className="text-5xl">Feels like: {weather.main.feels_like}°C</p>
+            <p className="text-l">Humidity: {weather.main.humidity}RH</p>
+            <p className="text-l">Description: {weather.weather[0].description}</p>
+            <img className="w-fit m-auto" src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}.png`} alt={weather.weather[0].description}  />
         </div>
     );
 }

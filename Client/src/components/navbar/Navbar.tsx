@@ -47,7 +47,7 @@ export default function Navbar() {
   }, [location.pathname]);
 
   return (
-    <Disclosure as="nav" className="bg-gray-800 fixed top-0 w-full z-10">
+    <Disclosure as="nav" className="bg-gray-800 w-full z-10">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-8xl px-2 sm:px-6 lg:px-8">
