@@ -6,12 +6,12 @@ export default {
   ],
   theme: {
     extend: {},
-    // fontSize: {
-    //   vws: ['.5vw'],
-    //   vwm: ['.8vw'],
-    //   vwl: ['2vw'],
-    //   vwxl: ['3vw'],
-    // }
+    gridTemplateColumns: {
+      "my": "repeat(3, minmax(0, 1fr))",
+    },
+    gridTemplateRows: {
+      "my": "repeat(3, minmax(0, 1fr))",
+    },
   },
   plugins: [      
     forms,

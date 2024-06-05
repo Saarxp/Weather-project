@@ -32,8 +32,10 @@ function WeatherCard({ weather }: WeatherCardProps) {
             <h1 className="text-xl">{weather.city.name}</h1>,
             <p className="text-xl">Country: {weather.city.country}</p>
           </div>
-          <div className="flex flex-wrap items-center justify-start gap-5">
+          <div className="grid lg:grid-rows-my lg:grid-cols-my gap-5 mt-5 ">
             {weather.list.map((weather, index) => {
+              console.log("weather",weather);
+              
               return (
                 <WeatherDay
                   key={weather.dt}
