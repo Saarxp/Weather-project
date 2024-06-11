@@ -25,7 +25,7 @@ function WeatherCard({ weather }: WeatherCardProps) {
   
 
   return (
-    <div className="container w-full h-4/5 text-center text-white">
+    <div className="container w-full text-center text-white">
       <div key={weather.city.id} className="">
         <div className="flex flex-col">
           <div className="flex justify-center align-center gap-x-2">
@@ -34,8 +34,6 @@ function WeatherCard({ weather }: WeatherCardProps) {
           </div>
           <div className="grid lg:grid-rows-my lg:grid-cols-my gap-5 mt-5 ">
             {weather.list.map((weather, index) => {
-              console.log("weather",weather);
-              
               return (
                 <WeatherDay
                   key={weather.dt}

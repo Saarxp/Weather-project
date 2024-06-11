@@ -50,7 +50,7 @@ function Weather() {
   return (
     <>
       {token ?
-        <div className="flex flex-col gap-y-6 h-4/5">
+        <div className="flex flex-col gap-y-6">
           <h1 className='flex justify-center items-center text-4xl text-white'>Search a city weather!</h1>
           <form className='flex justify-center items-center' onSubmit={(ev) => handleSearch(ev)}>
             <input type="text" name='inputCity' onChange={(event) => setCity(event.target.value)} />
